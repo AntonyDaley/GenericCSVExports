@@ -44,7 +44,7 @@ CSV Export as a name for the Object might not be appropriate for your client and
 6. Press Manage Records on CSV Import Mapping
 7. Press New
 8. Give your Import Mapping a sensible label that helps you spot what it is doing
-9. Enter the RecordType developer API Name that you created previous in CSV Import RecordType
+9. Enter the RecordType developer API Name that you created previously for the CSV Export
 10. Select the Object that you want to import record from in Import Object
 11. Select the Mapping Field that you created in step 2
 12. Set the Filter Type to AND or OR - If you set as AND any filters you add a record will need to pass them all, if you set to OR then if any 1 of those filters equals true the record will be pulled in.
@@ -53,17 +53,17 @@ CSV Export as a name for the Object might not be appropriate for your client and
 15. Go to Custom Meta Data in Setup
 16. Select Manage Records on CSV Import Mapping Filter
 17. Press New
-18. Give your meta data a logical label so you know what it is and what the filter is
-19. Lookup your CSV Import Mapping you created above and link it to the record.
-20. Specific the Field API Name on the Object your are importing records from that you want to use in the filter.
+18. Give your meta data a logical label so you know what it is and what the filter is (ie. BACS Payment Record Type)
+19. Lookup your CSV Import Mapping you created above (step 7) and link it to the record
+20. Specify the Field API Name on the Object your are importing records from that you want to use in the filter
 21. Specify the Filter type
 22. Specify the filter value - if using boolean/checkboxes then you can add in true or false
 23. Press Save
-24. Repeat steps 16-23 until you are happy you have the correct filters in place.
+24. Repeat steps 16-23 until you are happy you have the correct filters in place
 25. Add some test data to your Salesforce
 26. Go to the CSV Export Application
 27. Go to the CSV Export tab
-28. Press new and select your new recordtype
+28. Press new and select your new RecordType
 29. Move the status to Import
 30. Verifiy the correct records were linked to the CSV Export record
 
@@ -73,7 +73,7 @@ CSV Export as a name for the Object might not be appropriate for your client and
 3. Select New
 4. Enter a Label and makes sense for the File you are going to Export
 5. Enter your FileName you do not need to include .csv that is added automatically
-6. Enter the RecordType Developer Name of the CSV Export record that you want setup the export from
+6. Enter the RecordType Developer Name of the CSV Export record that you want to setup the export from
 7. Confirm if you would like to use versioning on the files created - this means if ticked you can generate the file numerous times and you will only see 1 file on the record but retain previous version. If left unticked each generation will create a new file.
 8. Set the Export Object that you want to pull data into the CSV file from
 9. Set the Export Related Field that confirms the relationship (lookup) with your CSV Export record
@@ -90,7 +90,7 @@ CSV Export as a name for the Object might not be appropriate for your client and
 20. Press Save
 21. Repeat steps 12-20 until you have all the required fields in your meta data
 22. Now go to your CSV Export record and move the status to Export
-23. Refresh your page and then review the file created - the file is created using an @future method which means it doesn't happen immediately.
+23. Refresh your page and then review the file created - the file is created using an @future method which means it doesn't happen immediately
 
 ### Amend the Processes
 This package is completely unmanaged and you can amend and change the processes how you like. Out the box there is a Process Builder enabled on the CSV Export record call CSV Export Processes. It has 2 decisions in it:
